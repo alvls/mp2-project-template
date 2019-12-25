@@ -20,8 +20,8 @@ int main()
 
   setlocale(LC_ALL, "Russian");
   cout << "Тестирование программ поддержки битового поля" << endl;
-  cout << "             Решето Эратосфена" << endl;
-  cout << "Введите верхнюю границу целых значений - ";
+  cout << "Решето Эратосфена" << endl;
+  cout << "Введите вернхюю границу целых значений - ";
   cin  >> n;
   TBitField s(n + 1);
   // заполнение множества
@@ -49,6 +49,13 @@ int main()
     }
   cout << endl;
   cout << "В первых " << n << " числах " << count << " простых" << endl;
+  cout << "В первых " << n << " числах " << count << " простых" << endl;
+
+  const char exitCode = 'e';
+  char ch;
+  do {
+	  cin >> ch;
+  } while (ch != 'e');
 }
 #else
 
@@ -89,6 +96,12 @@ int main()
     }
   cout << endl;
   cout << "В первых " << n << " числах " << count << " простых" << endl;
+
+  const char exitCode = 'e';
+  char ch;
+  do {
+	  cin >> ch;
+  } while (ch != 'e');
 }
 
 #endif
