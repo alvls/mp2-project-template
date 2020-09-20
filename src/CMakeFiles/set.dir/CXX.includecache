@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Code/mp2-lab1-set/src/tbitfield.cpp
+tbitfield.h
+C:/Code/mp2-lab1-set/src/tbitfield.h
+memory.h
+-
+
+C:/Code/mp2-lab1-set/src/tset.cpp
+tset.h
+C:/Code/mp2-lab1-set/src/tset.h
+
+include/tbitfield.h
+iostream
+-
+string
+-
+
+include/tset.h
+tbitfield.h
+include/tbitfield.h
+
