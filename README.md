@@ -1,3 +1,5 @@
+Максим, код не компилируется.
+
 # Методы программирования 2: Множества на основе битовых полей
 
 [![Build Status](https://travis-ci.org/UNN-ITMM-Software/mp2-lab1-set.svg)][travis]
