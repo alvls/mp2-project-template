@@ -1,12 +1,6 @@
-// ННГУ, ВМК, Курс "Методы программирования-2", С++, ООП
-//
-// tbitfield.cpp - Copyright (c) Гергель В.П. 07.05.2001
-//   Переработано для Microsoft Visual Studio 2008 Сысоевым А.В. (19.04.2015)
-//
 // Битовое поле
 
 #include "../include/tbitfield.h"
-#include <cassert>
 
 TBitField::TBitField(int len) : BitLen(len) 
 {
@@ -97,23 +91,22 @@ TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 	return *this;
 }
 
-int TBitField::operator==(const TBitField &bf) const // сравнение
+bool TBitField::operator==(const TBitField &bf) const // сравнение
 {
-	int res = 1;
+	bool res = true;
 	if (BitLen != bf.BitLen)
-		res = 0;
+		res = false;
 	else {
 		for(int i = 0; i < MemLen; i++) {
 			if(pMem[i] != bf.pMem[i]) {
-				res = 0;
+				res = false;
 				break;
 			}
 		}
 	}
 	return res;
 }
-
-int TBitField::operator!=(const TBitField &bf) const // сравнение
+bool TBitField::operator!=(const TBitField &bf) const // сравнение
 {
 	return !(*this==bf);
 }
@@ -138,7 +131,7 @@ TBitField TBitField::operator&(const TBitField &bf) // операция "и"
 	return temp;
 }
 
-TBitField TBitField::operator~(void) // отрицание
+TBitField TBitField::operator~() // отрицание
 {
 	TBitField temp(BitLen);
 	for (int i = 0; i < MemLen; i++) {
