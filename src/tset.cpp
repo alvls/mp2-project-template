@@ -143,8 +143,7 @@ TSet TSet::operator~(void) // дополнение
 
 istream& operator>>(istream& istr, TSet& s) // ввод
 {
-	istream& operator>>(istream& istr, TSet& s) // ввод
-	{
+	
 		istr >> s.BitField;
 		return istr;
 }
